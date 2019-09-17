@@ -15,12 +15,18 @@ const html = () =>
 
 const css = () =>
     gulp.src("src/index.scss")
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: ["node_modules"]
+        }))
         .pipe(gulp.dest("dist"));
 
 const img = () =>
     gulp.src("src/img/**")
         .pipe(gulp.dest("dist/img"));
+
+const font = () =>
+    gulp.src("node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-*")
+        .pipe(gulp.dest("dist/font"));
 
 const watch = () => {
     gulp.watch("src/**/*.pug", html);
@@ -28,8 +34,9 @@ const watch = () => {
 };
 
 module.exports = {
-    default: gulp.parallel(html, css, img),
+    default: gulp.parallel(html, css, img, font),
     html,
     css,
+    font,
     watch,
 };
