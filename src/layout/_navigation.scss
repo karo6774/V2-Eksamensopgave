@@ -16,6 +16,7 @@
     font-weight: 300;
     margin: 0;
     text-transform: uppercase;
+    color: $nav-fg-color;
   }
 
   .navigation__links {
@@ -25,7 +26,7 @@
   .navigation__link {
     display: inline-block;
 
-    &+.navigation__link {
+    & + .navigation__link {
       margin-left: 2em;
     }
   }

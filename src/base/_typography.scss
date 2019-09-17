@@ -1,0 +1,10 @@
+@import "../themes/theme";
+
+body {
+  font-family: 'Lato Regular', sans-serif;
+  color: $text-primary-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-heading-color;
+}
