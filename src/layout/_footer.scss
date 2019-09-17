@@ -1,3 +1,4 @@
+@import "../abstracts/variables";
 @import "../themes/theme";
 
 .footer {
@@ -11,16 +12,26 @@
   }
 
   .footer__social-links {
-    text-align: end;
+    text-align: center;
+
+    @media only screen and (min-width: $breakpoint-s) {
+      text-align: end;
+    }
   }
 
   .footer__links {
     display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
     margin-top: 2em;
   }
 
   .footer__column {
-    flex-grow: 1;
+    flex-basis: 50%;
+
+    @media only screen and (min-width: $breakpoint-s) {
+      flex-basis: 33.33%;
+    }
   }
 
   .footer__link-list {
