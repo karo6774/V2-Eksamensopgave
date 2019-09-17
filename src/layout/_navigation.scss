@@ -1,14 +1,20 @@
+@import "../abstracts/variables";
 @import "../themes/theme";
 
 .navigation {
   display: flex;
-  align-items: flex-end;
-  flex-flow: row;
+  align-items: center;
+  flex-flow: column;
   box-sizing: border-box;
   width: 100%;
   padding: 2em 3em 0.8em;
   color: $nav-fg-color;
   background-color: $nav-bg-color;
+
+  @media only screen and (min-width: $breakpoint-m) {
+    flex-flow: row;
+    align-items: flex-end;
+  }
 
   .navigation__logo {
     font-size: 3em;
@@ -20,6 +26,10 @@
   .navigation__links {
     margin: 0 0 0.5em auto;
     padding: 0;
+
+    @media only screen and (max-width: $breakpoint-m) {
+      margin-left: 0;
+    }
   }
 
   .navigation__link {
