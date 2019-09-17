@@ -14,6 +14,7 @@
     "@types/gulp": "^4.0.6",
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "numeral": "^2.0.6"
   }
 }

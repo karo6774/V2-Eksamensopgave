@@ -1,0 +1,29 @@
+mixin showcase-item(title, image, size, price)
+  article.showcase-item
+    img.showcase-item__image(src=image)
+    h3.showcase-item__title= title
+    p #{numeral(size).format('0[.]0')} M²
+    p
+      | Pris #{numeral(price).format('0,0.00')} kr #[br]
+      | Prisen er excl. montage
+
+mixin showcase()
+  section.showcase
+    +showcase-item(
+    "Træhus",
+    "img/5m2-traehus1.jpg",
+    5,
+    53200.00
+    )
+    +showcase-item(
+    "Fritidshus",
+    "img/28m2-fritidshus2.jpg",
+    28,
+    42000.00
+    )
+    +showcase-item(
+    "Pavillion",
+    "img/9m2-pavillion2.jpg",
+    9.5,
+    49900.00
+    )

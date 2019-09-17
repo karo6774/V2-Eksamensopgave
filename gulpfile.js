@@ -1,10 +1,16 @@
 const gulp = require("gulp");
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
+const numeral = require("numeral");
+require("numeral/locales/da-dk");
+
+numeral.locale("da-dk");
 
 const html = () =>
     gulp.src("src/index.pug")
-        .pipe(pug())
+        .pipe(pug({
+            locals: {numeral}
+        }))
         .pipe(gulp.dest("dist"));
 
 const css = () =>
