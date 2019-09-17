@@ -1,0 +1,32 @@
+@import "../themes/theme";
+
+.navigation {
+  display: flex;
+  align-items: flex-end;
+  flex-flow: row;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2em 3em 0.8em;
+  color: $nav-fg-color;
+  background-color: $nav-bg-color;
+
+  .navigation__logo {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .navigation__links {
+    margin: 0 0 0.5em auto;
+  }
+
+  .navigation__link {
+    display: inline-block;
+
+    &+.navigation__link {
+      margin-left: 2em;
+    }
+  }
+}
