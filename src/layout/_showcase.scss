@@ -16,12 +16,12 @@
 
 .showcase-item {
   display: block;
-  flex-basis: 33.33%;
+  flex-basis: 50%;
   padding: 0.5em;
   box-sizing: border-box;
 
-  @media only screen and (max-width: $breakpoint-m) {
-    flex-basis: 50%;
+  @media only screen and (min-width: $breakpoint-m) {
+    flex-basis: 33.33%;
   }
 
   .showcase-item__container {
