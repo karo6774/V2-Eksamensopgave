@@ -1,4 +1,5 @@
 include layout/about
+include layout/footer
 include layout/header
 include layout/showcase
 
@@ -7,8 +8,10 @@ html(lang="dk")
     title Natual Living
     meta(charset='utf-8')
     link(rel="stylesheet" href="index.css" type="text/css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css")
   body
     +header
     main
       +about
       +showcase
+    +footer
