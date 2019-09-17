@@ -1,4 +1,5 @@
 @import "../themes/theme";
+@import "../abstracts/variables";
 
 .about {
   max-width: 62rem;
@@ -12,7 +13,7 @@
   }
 
   .about__text {
-    @media only screen and (min-width: 62rem) {
+    @media only screen and (min-width: $breakpoint-m) {
       column-count: 2;
     }
   }
