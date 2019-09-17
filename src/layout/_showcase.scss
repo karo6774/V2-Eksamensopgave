@@ -1,0 +1,46 @@
+@import "../themes/theme";
+
+.showcase {
+  padding: 1.5em;
+  background-color: $bg-secondary-color;
+
+  .showcase__item-container {
+    display: flex;
+    max-width: 62rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.showcase-item {
+  display: block;
+  flex-basis: 33.33%;
+  padding: 0.5em;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 48rem) {
+    flex-basis: 50%;
+  }
+
+  .showcase-item__container {
+    width: 100%;
+    background-color: $card-bg-color;
+    display: inline-block;
+  }
+
+  .showcase-item__image {
+    width: 100%;
+    height: 14em;
+    object-fit: cover;
+  }
+
+  .showcase-item__content {
+    margin: 1em 1em 3em;
+  }
+
+  .showcase-item__title {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
