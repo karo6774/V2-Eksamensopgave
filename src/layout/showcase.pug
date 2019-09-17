@@ -3,7 +3,7 @@ include ../components/button
 mixin showcase-item(title, image, size, price)
   article.showcase-item
     div.showcase-item__container
-      img.showcase-item__image(src=image)
+      img.showcase-item__image(src=image, alt=title)
       div.showcase-item__content
         h3.showcase-item__title= title
         span #{numeral(size).format('0[.]0')} M²
