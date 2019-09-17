@@ -1,0 +1,17 @@
+@import "../themes/theme";
+
+.arrow {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    width: 3em;
+    height: 1.5em;
+    margin-left: -1.5em;
+    content: '';
+    background-color: $arrow-bg-color;
+    clip-path: polygon(0 100%, 50% 0%, 100% 100%, 60% 100%, 50% 80%, 40% 100%);
+  }
+}
