@@ -24,11 +24,11 @@
   }
 
   .navigation__links {
-    margin: 0 0 0.5em auto;
+    margin: 0 0 0.5em;
     padding: 0;
 
-    @media only screen and (max-width: $breakpoint-m) {
-      margin-left: 0;
+    @media only screen and (min-width: $breakpoint-m) {
+      margin-left: auto;
     }
   }
 
