@@ -7,10 +7,10 @@
 
   .showcase__item-container {
     display: flex;
-    max-width: 62rem;
-    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 62rem;
+    margin: 0 auto;
   }
 }
 
@@ -29,9 +29,9 @@
   }
 
   .showcase-item__container {
+    display: inline-block;
     width: 100%;
     background-color: $card-bg-color;
-    display: inline-block;
   }
 
   .showcase-item__image {
@@ -45,8 +45,8 @@
   }
 
   .showcase-item__title {
-    text-transform: uppercase;
     margin-bottom: 0;
+    text-transform: uppercase;
   }
 }
 
@@ -54,7 +54,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 100%;
   height: 22rem;
+  padding: 2em;
+  text-align: center;
   background: right / cover no-repeat url("img/5642_Hejrelunden_(20).jpg");
 }
