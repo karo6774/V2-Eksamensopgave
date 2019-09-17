@@ -17,4 +17,8 @@
       column-count: 2;
     }
   }
+
+  .about__text > p:first-child {
+    margin-top: 0;
+  }
 }
