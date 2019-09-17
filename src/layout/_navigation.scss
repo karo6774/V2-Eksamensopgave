@@ -8,12 +8,13 @@
   box-sizing: border-box;
   width: 100%;
   padding: 2em 3em 0.8em;
+  text-align: center;
   color: $nav-fg-color;
   background-color: $nav-bg-color;
 
   @media only screen and (min-width: $breakpoint-m) {
-    flex-flow: row;
     align-items: flex-end;
+    flex-flow: row;
   }
 
   .navigation__logo {
@@ -34,9 +35,6 @@
 
   .navigation__link {
     display: inline-block;
-
-    & + .navigation__link {
-      margin-left: 2em;
-    }
+    margin: 0.5em 1em;
   }
 }
