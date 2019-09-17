@@ -1,0 +1,19 @@
+@import "../themes/theme";
+
+.about {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 2em 2em;
+  background-color: $bg-primary-color;
+
+  .about__heading {
+    text-align: center;
+    font-size: 2em  ;
+  }
+
+  .about__text {
+    @media only screen and (min-width: 62rem) {
+      column-count: 2;
+    }
+  }
+}
