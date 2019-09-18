@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const pug = require("gulp-pug");
 const sass = require("gulp-sass");
+const imagemin = require("gulp-imagemin");
 const numeral = require("numeral");
 require("numeral/locales/da-dk");
 
@@ -16,12 +17,14 @@ const html = () =>
 const css = () =>
     gulp.src("src/index.scss")
         .pipe(sass({
-            includePaths: ["node_modules"]
+            includePaths: ["node_modules"],
+            outputStyle: 'compressed'
         }))
         .pipe(gulp.dest("dist"));
 
 const img = () =>
     gulp.src("src/img/**")
+        .pipe(imagemin())
         .pipe(gulp.dest("dist/img"));
 
 const font = () =>
