@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 62rem;
+    max-width: $max-page-width;
     margin: 0 auto;
   }
 }

@@ -7,7 +7,7 @@
   background-color: $footer-bg-color;
 
   .footer__container {
-    max-width: 62rem;
+    max-width: $max-page-width;
     margin: 2em auto;
   }
 

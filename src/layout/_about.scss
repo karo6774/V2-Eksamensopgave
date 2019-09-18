@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 
 .about {
-  max-width: 62rem;
+  max-width: $max-page-width;
   margin: 0 auto;
   padding: 2em 2em;
   background-color: $bg-primary-color;
