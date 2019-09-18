@@ -15,7 +15,12 @@
     text-align: center;
 
     @media only screen and (min-width: $breakpoint-s) {
-      text-align: end;
+      @supports (text-align: end) {
+        text-align: end;
+      }
+      @supports (text-align: right) {
+        text-align: right;
+      }
     }
   }
 
