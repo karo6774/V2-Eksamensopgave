@@ -10,7 +10,7 @@
   z-index: 0;
   overflow: hidden;
   padding: 0.6em 2em;
-  transition: all $transition-duration;
+  transition: border-color $transition-duration;
   text-decoration: none;
   text-transform: uppercase;
   border: 2px solid $button-fg-color;
@@ -18,12 +18,16 @@
   background-color: transparent;
   mix-blend-mode: hard-light;
 
+  .button__content {
+    color: white;
+    mix-blend-mode: difference;
+  }
+
   &:link, &:visited {
     color: $button-fg-color;
   }
 
   &:hover, &:focus {
-    color: $hover-fg;
     border-color: $hover-bg;
   }
 
