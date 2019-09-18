@@ -11,7 +11,7 @@ mixin showcase-item(title, image, size, price)
           p
             | Pris #{numeral(price).format('0,0.00')} kr #[br]
             | Prisen er excl. montage
-      div.showcase-item__side.showcase-item__back
+      div(style="background-image:url('"+image+"')").showcase-item__side.showcase-item__back
         h3.showcase-item__title.showcase-item__title--light= title
         block
         +button("#", "showcase-item__buy-button") Bestil
