@@ -42,7 +42,7 @@
       position: absolute;
       z-index: -1;
       top: 0;
-      right: 104%;
+      right: calc(100% + 0.7em);
       bottom: 0;
       left: $overflow;
       content: "";
