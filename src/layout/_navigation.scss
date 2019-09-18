@@ -60,7 +60,7 @@
       background-color: $nav-fg-color;
     }
 
-    &:hover::before {
+    &:hover::before, &:focus::before {
       top: 0;
     }
   }
