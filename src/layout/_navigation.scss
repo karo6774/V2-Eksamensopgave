@@ -4,7 +4,6 @@
 .navigation {
   box-sizing: border-box;
   width: 100%;
-  padding: 2em 3em 0.8em;
   background-color: $nav-bg-color;
 
   .navigation__container {
@@ -24,13 +23,43 @@
 
   .navigation__logo {
     font-size: 3em;
-    margin: 0;
+    margin: 0.8em 0 0;
     text-transform: uppercase;
     color: $nav-fg-color;
   }
 
+  .navigation__logo-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0 0.5em;
+    text-decoration: none;
+
+    $overflow: -0.7em;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: calc(100% + 0.7em);
+      bottom: 0;
+      left: $overflow;
+      content: "";
+      transition: right 0.4s;
+      transform: skewX(20deg);
+      background-color: white;
+    }
+
+    &:hover::before, &:focus::before {
+      right: $overflow;
+    }
+  }
+
+  .navigation__logo-content {
+    mix-blend-mode: difference;
+  }
+
   .navigation__links {
-    margin: 0 0 0.5em;
+    margin: 0;
     padding: 0;
 
     @media only screen and (min-width: $breakpoint-m) {
@@ -46,7 +75,7 @@
     position: relative;
     display: inline-block;
     box-sizing: border-box;
-    padding: 0.5em 1em;
+    padding: 0.8em 1em;
     text-decoration: none;
 
     &::before {

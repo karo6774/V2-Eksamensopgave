@@ -3,7 +3,9 @@ mixin header()
     img.header__image(src="img/2010-hus-i-træ.jpg" alt="Natual Living")
     nav.navigation
       div.navigation__container
-        h1.navigation__logo Natual Living
+        h1.navigation__logo
+          a.navigation__logo-link(href="#")
+            span.navigation__logo-content Natual Living
         ul.navigation__links
           each val in ["Små træhuse", "Byg Selv", "Kontakt"]
             li.navigation__link-item
