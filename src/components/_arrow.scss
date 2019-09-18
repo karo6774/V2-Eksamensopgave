@@ -1,7 +1,9 @@
 @import "../themes/theme";
 
 .arrow {
-  @supports (clip-path: polygon()) {
+  $path: 0 100%, 50% 0%, 100% 100%, 60% 100%, 50% 80%, 40% 100%;
+
+  @supports (clip-path: polygon($path)) {
     position: relative;
 
     &::before {
@@ -16,7 +18,7 @@
       margin-left: -$half * 1em;
       content: '';
       background-color: $arrow-bg-color;
-      clip-path: polygon(0 100%, 50% 0%, 100% 100%, 60% 100%, 50% 80%, 40% 100%);
+      clip-path: polygon($path);
     }
   }
 }
