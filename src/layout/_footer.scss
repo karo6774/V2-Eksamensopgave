@@ -40,12 +40,8 @@
     list-style: none;
   }
 
-  .footer__link {
-    color: inherit;
-
-    &:before {
-      content: "- "
-    }
+  .footer__link:before {
+    content: "- "
   }
 }
 
