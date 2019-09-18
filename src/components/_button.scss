@@ -10,11 +10,14 @@
   transition: all $transition-duration;
   text-decoration: none;
   text-transform: uppercase;
-  color: $button-fg-color;
   border: 2px solid $button-fg-color;
   border-radius: 3em;
   background-color: transparent;
   mix-blend-mode: hard-light;
+
+  &:link, &:visited {
+    color: $button-fg-color;
+  }
 
   &:hover {
     color: rgb(35%, 35%, 35%);
