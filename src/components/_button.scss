@@ -16,13 +16,24 @@
   background-color: transparent;
   mix-blend-mode: hard-light;
 
-  .button__content {
+  &:link, &:visited {
     color: $hover-bg;
-    mix-blend-mode: difference;
   }
 
-  &:link, &:visited {
-    color: $button-fg-color;
+  @supports not (mix-blend-mode: difference) {
+    transition: color $transition-duration;
+
+    &:hover, &:focus {
+      color: $text-dark-color;
+    }
+  }
+
+  .button__content {
+    z-index: 0;
+
+    @supports (mix-blend-mode: difference) {
+      mix-blend-mode: difference;
+    }
   }
 
   &::before {
