@@ -1,20 +1,22 @@
 @import "../themes/theme";
 
 .arrow {
-  position: relative;
+  @supports (clip-path: polygon()) {
+    position: relative;
 
-  &::before {
-    $width: 2.4;
-    $half: $width / 2;
+    &::before {
+      $width: 2.4;
+      $half: $width / 2;
 
-    position: absolute;
-    top: -$half * 1em;
-    left: 50%;
-    width: $width * 1em;
-    height: $half * 1em;
-    margin-left: -$half * 1em;
-    content: '';
-    background-color: $arrow-bg-color;
-    clip-path: polygon(0 100%, 50% 0%, 100% 100%, 60% 100%, 50% 80%, 40% 100%);
+      position: absolute;
+      top: -$half * 1em;
+      left: 50%;
+      width: $width * 1em;
+      height: $half * 1em;
+      margin-left: -$half * 1em;
+      content: '';
+      background-color: $arrow-bg-color;
+      clip-path: polygon(0 100%, 50% 0%, 100% 100%, 60% 100%, 50% 80%, 40% 100%);
+    }
   }
 }
