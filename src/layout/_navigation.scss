@@ -46,7 +46,7 @@
       content: "";
       transition: right 0.4s;
       transform: skewX(20deg);
-      background-color: white;
+      background-color: $nav-fg-color;
     }
 
     &:hover::before, &:focus::before {
