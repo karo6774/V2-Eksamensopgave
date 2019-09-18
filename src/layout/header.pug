@@ -1,3 +1,9 @@
+mixin nav-link(href)
+  li.navigation__link-item
+    a.navigation__link(href=href)
+      span.navigation__link-content
+        block
+
 mixin header()
   header.header
     img.header__image(src="img/2010-hus-i-træ.jpg" alt="Natual Living")
@@ -7,7 +13,6 @@ mixin header()
           a.navigation__logo-link(href="#")
             span.navigation__logo-content Natual Living
         ul.navigation__links
-          each val in ["Små træhuse", "Byg Selv", "Kontakt"]
-            li.navigation__link-item
-              a.navigation__link(href="#")
-                span.navigation__link-content= val
+          +nav-link("#") Små Træhuse
+          +nav-link("#") Byg Selv
+          +nav-link("#") Kontakt
