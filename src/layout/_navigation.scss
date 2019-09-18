@@ -2,19 +2,24 @@
 @import "../themes/theme";
 
 .navigation {
-  display: flex;
-  align-items: center;
-  flex-flow: column;
   box-sizing: border-box;
   width: 100%;
   padding: 2em 3em 0.8em;
-  text-align: center;
-  color: $nav-fg-color;
   background-color: $nav-bg-color;
 
-  @media only screen and (min-width: $breakpoint-m) {
-    align-items: flex-end;
-    flex-flow: row;
+  .navigation__container {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: $nav-fg-color;
+
+    @media only screen and (min-width: $breakpoint-m) {
+      align-items: flex-end;
+      flex-flow: row;
+    }
   }
 
   .navigation__logo {
