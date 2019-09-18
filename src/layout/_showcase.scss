@@ -18,7 +18,9 @@
   display: block;
   flex-basis: 100%;
   box-sizing: border-box;
+  height: 24.5em;
   padding: 0.5em;
+  background-color: transparent;
 
   @media only screen and (min-width: $breakpoint-s) {
     flex-basis: 50%;
@@ -29,9 +31,49 @@
   }
 
   .showcase-item__container {
+    position: relative;
     display: inline-block;
     width: 100%;
-    background-color: $card-bg-color;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+
+  &:hover .showcase-item__container {
+    transform: rotateY(180deg);
+  }
+
+  .showcase-item__side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .showcase-item__front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-color: $card-front-bg-color;
+  }
+
+  .showcase-item__back {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    box-sizing: border-box;
+    padding: 1em 1em 3em;
+    transform: rotateY(180deg);
+    color: $text-light-color;
+    background-color: $card-back-bg-color;
+
+    .showcase-item__title {
+      text-align: center;
+    }
+  }
+
+  .showcase-item__buy-button {
+    display: inline-block;
+    margin-top: auto;
   }
 
   .showcase-item__image {
@@ -47,6 +89,10 @@
   .showcase-item__title {
     margin-bottom: 0;
     text-transform: uppercase;
+
+    &--light {
+      color: $text-light-color;
+    }
   }
 }
 
