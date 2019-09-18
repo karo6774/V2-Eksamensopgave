@@ -19,7 +19,7 @@
     color: $button-fg-color;
   }
 
-  &:hover {
+  &:hover, &:focus {
     color: rgb(35%, 35%, 35%);
     border-color: rgb(95%, 95%, 95%);
   }
@@ -50,7 +50,7 @@
     background-color: rgb(95%, 95%, 95%);
   }
 
-  &:hover::before {
+  &:hover::before, &:focus::before {
     transform: scale(0)
   }
 }
