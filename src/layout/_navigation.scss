@@ -38,13 +38,33 @@
   }
 
   .navigation__link {
+    position: relative;
     display: inline-block;
     box-sizing: border-box;
     padding: 0.5em 1em;
     text-decoration: none;
 
+    &::before {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      transition: top 0.2s;
+      background-color: white;
+    }
+
+    &:hover::before {
+      top: 0;
+    }
+
     &:visited, &:link {
       color: inherit;
     }
+  }
+
+  .navigation__link-content {
+    mix-blend-mode: difference;
   }
 }
