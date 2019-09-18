@@ -11,22 +11,18 @@
   transition: border-color $transition-duration;
   text-decoration: none;
   text-transform: uppercase;
-  border: 2px solid $button-fg-color;
+  border: 2px solid $hover-bg;
   border-radius: 3em;
   background-color: transparent;
   mix-blend-mode: hard-light;
 
   .button__content {
-    color: white;
+    color: $hover-bg;
     mix-blend-mode: difference;
   }
 
   &:link, &:visited {
     color: $button-fg-color;
-  }
-
-  &:hover, &:focus {
-    border-color: $hover-bg;
   }
 
   &::before {
