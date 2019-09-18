@@ -39,7 +39,7 @@
     transform-style: preserve-3d;
   }
 
-  &:hover .showcase-item__container {
+  &:hover .showcase-item__container, .showcase-item__container.hover {
     transform: rotateY(180deg);
   }
 
