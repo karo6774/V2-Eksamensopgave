@@ -52,7 +52,7 @@
       left: 0;
       content: "";
       transition: top 0.2s;
-      background-color: white;
+      background-color: $nav-fg-color;
     }
 
     &:hover::before {
